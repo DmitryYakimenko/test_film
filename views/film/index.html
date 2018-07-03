@@ -1,0 +1,22 @@
+<form name="search" method="get">
+    <p><b>Название фильма: </b><input type="text" name="title"></p>
+    <p><b>Имя актера: </b><input type="text" name="star_name">
+    <input type="submit">
+</form>
+<table border="1" name="films">
+<tr>
+    <th><a href="?order_by=<?=$data['order_by']?>&column=title">Название</a></th>
+    <th><a href="?order_by=<?=$data['order_by']?>&column=release">Дата выхода</a></th>
+    <th><a href="?order_by=<?=$data['order_by']?>&column=format">Формат</a></th>
+	<th>Актеры</th>
+</tr>
+<?php foreach($data['films'] as $film){?>
+  <tr name="film">
+    <td nam="title"><?=$film['title']?></td>
+	<td nam="release"><?=$film['release']?></td>
+	<td nam="format"><?=$film['format']?></td>
+	<td nam="stars"><?=$film['stars']?></td>
+	<td nam="link"><a href="/film/view/<?=$film['film_id']?>">Подробней</a></td>
+  </tr>
+<?php } ?>
+</table>

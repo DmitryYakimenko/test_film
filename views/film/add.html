@@ -1,0 +1,21 @@
+<form method="POST">
+  <p><b>Форма создания фильма</b></p>
+  <p>Название фильма: <input type="text" name="title" value=""></p>
+  <p>Год вихода: <input type="number" min="1900" max="2018" name="release" value=""></p>
+  <p>Формат: <select name="format">
+    <option value="DVD">DVD</option>
+    <option value="Blu-Ray">Blu-Ray</option>
+    <option value="VHS">VHS</option>
+	</select></p>
+	<div class="stars"  >
+		<p><b>Актеры</b></p>
+		<div id="1" class="star" >
+			<p><b>Актер 1</b></p>
+			<p>Имя: <input type="text" name="stars[1][name]" value=""></p>
+			<p>Фамилия: <input type="text" name="stars[1][surname]" value=""></p>
+		</div>
+	</div>
+	<input type="button" onclick="add_input()" value="Добавить">
+	
+  <p><input type="submit"></p>
+</form>
